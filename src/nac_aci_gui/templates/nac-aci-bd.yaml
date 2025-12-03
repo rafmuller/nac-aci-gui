@@ -1,0 +1,24 @@
+name: {{ bd_name }}
+mac: 00:22:BD:F8:19:FE
+virtual_mac: 00:23:BD:F8:19:12
+ep_move_detection: true
+arp_flooding: true
+ip_dataplane_learning: true
+limit_ip_learn_to_subnets: false
+multi_destination_flooding: encap-flood
+unknown_unicast: flood
+unknown_ipv4_multicast: flood
+unknown_ipv6_multicast: flood
+unicast_routing: true
+clear_remote_mac_entries: true
+advertise_host_routes: true
+l3_multicast: false
+multicast_arp_drop: false
+vrf: {{vrf_name}}
+subnets:
+  - ip: {{ bd_subnet }}
+    description: Subnet for {{ bd_name }} Bridge Domain via NaC
+    primary_ip: true
+    public: false
+    igmp_querier: true
+    nd_ra_prefix: true
