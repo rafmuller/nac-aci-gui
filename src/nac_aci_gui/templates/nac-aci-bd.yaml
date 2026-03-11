@@ -3,8 +3,6 @@ mac: 00:22:BD:F8:19:FE
 virtual_mac: 00:23:BD:F8:19:12
 ep_move_detection: true
 arp_flooding: true
-ip_dataplane_learning: true
-limit_ip_learn_to_subnets: false
 multi_destination_flooding: encap-flood
 unknown_unicast: flood
 unknown_ipv4_multicast: flood
